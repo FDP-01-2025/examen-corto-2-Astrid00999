@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
 
-    int edad, usuario, dispositivo, laptopb,  TabletE, costo = 0, saldor = 0;
+    int edad, usuario, dispositivo, laptopb, TabletE, costo = 0, saldor = 0;
     laptopb = 900;
-  
+
     cout << "Bienvenido a nuestra tienda electronica" << endl;
     cout << "Por favor ingrese su edad" << endl;
     cin >> edad;
@@ -39,6 +39,8 @@ int main()
 
         case '1':
 
+            // Catalogo de Estudiante.
+
             cout << "Dispositivos disponibles con el 20 por ciento de descuento" << endl;
             cout << "1. Laptop Básica: $900  " << endl;
             cout << "2. Tablet Estudiantil: $600  " << endl;
@@ -66,11 +68,15 @@ int main()
                 costo = 700 * 0.2;
 
                 break;
+            default:
+
+                cout << "Verificar los datos ingresados" << endl;
+
+                break;
             }
 
-            break;
-
-            if(costo < 1000){
+            if (costo < 1000)
+            {
 
                 cout << " Saldo disponible: $1000" << endl;
                 cout << " Compra existosa" << endl;
@@ -79,42 +85,78 @@ int main()
                 saldor = 1000 - costo;
 
                 cout << "Saldo restante" << saldor << endl;
-
-
-
             }
 
-
-            else {
+            else
+            {
                 cout << " Saldo disponible: $1000" << endl;
                 cout << "No fue posible realizar la compra" << endl;
 
                 saldor = 1000 - costo;
 
                 cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
-
-
-
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            break;
 
         case '2':
 
-            cout << "NO" << endl;
+            // Seccion para profesionales.
+
+            cout << "Dispositivos disponibles con el 10 por ciento de descuento" << endl;
+            cout << "1.Laptop Avanzada: $1500 " << endl;
+            cout << "2. Tablet Pro: $1200  " << endl;
+            cout << "3. Estacion de Trabajo: $2000 " << endl;
+            cin >> dispositivo;
+
+            switch (dispositivo)
+            {
+
+            case '1':
+
+                costo = 1500 * 0.1;
+
+                break;
+
+            case '2':
+
+                costo = 1200 * 0.1;
+
+                break;
+
+            case '3':
+
+                costo = 2000 * 0.1;
+
+                break;
+            default:
+
+                cout << "Verificar los datos ingresados" << endl;
+            }
+
+            if (costo < 1000)
+            {
+
+                cout << " Saldo disponible: $1000" << endl;
+                cout << " Compra existosa" << endl;
+                cout << " Usted ha comprado: " << dispositivo << endl;
+
+                saldor = 1000 - costo;
+
+                cout << "Saldo restante" << saldor << endl;
+            }
+
+            else
+            {
+                cout << " Saldo disponible: $1000" << endl;
+                cout << "No fue posible realizar la compra" << endl;
+
+                saldor = 1000 - costo;
+
+                cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
+            }
+
+            break;
 
             break;
 

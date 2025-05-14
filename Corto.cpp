@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
 
-    int edad, usuario, dispositivo, laptopb, costo = 0;
+    int edad, usuario, dispositivo, laptopb,  TabletE, costo = 0, saldor = 0;
     laptopb = 900;
-
+  
     cout << "Bienvenido a nuestra tienda electronica" << endl;
     cout << "Por favor ingrese su edad" << endl;
     cin >> edad;
@@ -72,7 +72,27 @@ int main()
 
             if(costo < 1000){
 
-                cout << " Su compra ha sido exitosa"
+                cout << " Saldo disponible: $1000" << endl;
+                cout << " Compra existosa" << endl;
+                cout << " Usted ha comprado: " << dispositivo << endl;
+
+                saldor = 1000 - costo;
+
+                cout << "Saldo restante" << saldor << endl;
+
+
+
+            }
+
+
+            else {
+                cout << " Saldo disponible: $1000" << endl;
+                cout << "No fue posible realizar la compra" << endl;
+
+                saldor = 1000 - costo;
+
+                cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
+
 
 
             }

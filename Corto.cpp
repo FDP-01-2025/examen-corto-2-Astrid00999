@@ -37,7 +37,7 @@ int main()
         switch (usuario)
         {
 
-        case '1':
+        case 1:
 
             // Catalogo de Estudiante.
 
@@ -51,19 +51,19 @@ int main()
             switch (dispositivo)
             {
 
-            case '1':
+            case 1:
 
                 costo = laptopb * 0.2;
 
                 break;
 
-            case '2':
+            case 2:
 
                 costo = 600 * 0.2;
 
                 break;
 
-            case '3':
+            case 3:
 
                 costo = 700 * 0.2;
 
@@ -99,7 +99,7 @@ int main()
 
             break;
 
-        case '2':
+        case 2:
 
             // Seccion para profesionales.
 
@@ -112,19 +112,19 @@ int main()
             switch (dispositivo)
             {
 
-            case '1':
+            case 1:
 
                 costo = 1500 * 0.1;
 
                 break;
 
-            case '2':
+            case 2:
 
                 costo = 1200 * 0.1;
 
                 break;
 
-            case '3':
+            case 3:
 
                 costo = 2000 * 0.1;
 
@@ -132,6 +132,8 @@ int main()
             default:
 
                 cout << "Verificar los datos ingresados" << endl;
+                break;
+
             }
 
             if (costo < 1000)
@@ -156,11 +158,9 @@ int main()
                 cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
             }
 
-            break;
-
-            break;
-
-        case '3':
+           break;
+            
+        case 3:
 
             cout << "Laptop Basica: $900  " << endl;
             cout << "Tablet Estudiantil: $600  " << endl;

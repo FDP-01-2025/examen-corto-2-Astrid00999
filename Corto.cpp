@@ -23,7 +23,7 @@ int main()
 
     else
     {
-        // //Paso 2: Solicitar el tipo de usuario (1 punto)
+        //  Solicitar el tipo de usuario 
         // El programa debe pedir al usuario que seleccione una categoría:
         // • Estudiante
         // • Profesional
@@ -52,6 +52,7 @@ int main()
 
             switch (dispositivo)
             {
+                // Seleccionar que dispositivo comprar
 
             case 1:
         
@@ -119,6 +120,7 @@ int main()
             switch (dispositivo)
             {
 
+// Seleccionar dispositivo
             case 1:
 
                 descuento = 1500 * 0.1;

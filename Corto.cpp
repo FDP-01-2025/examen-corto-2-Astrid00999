@@ -6,8 +6,10 @@ using namespace std;
 int main()
 {
 
-    int edad, usuario, dispositivo, laptopb, TabletE, costo = 0, saldor = 0;
+    int edad, usuario, dispositivo, laptopb, TabletE, costo = 0, saldor = 0, descuento;
     laptopb = 900;
+
+     
 
     cout << "Bienvenido a nuestra tienda electronica" << endl;
     cout << "Por favor ingrese su edad" << endl;
@@ -52,20 +54,24 @@ int main()
             {
 
             case 1:
+        
 
-                costo = laptopb * 0.2;
+                descuento = laptopb * 0.2;
+                costo = laptopb - descuento;
 
                 break;
 
             case 2:
 
-                costo = 600 * 0.2;
+               descuento = 600 * 0.2;
+               costo = 600 - descuento;
 
                 break;
 
             case 3:
 
-                costo = 700 * 0.2;
+                descuento = 700 * 0.2;
+                costo = 700 - descuento;
 
                 break;
             default:
@@ -79,12 +85,13 @@ int main()
             {
 
                 cout << " Saldo disponible: $1000" << endl;
+                cout << " descuento: $" << descuento << endl;
                 cout << " Compra existosa" << endl;
                 cout << " Usted ha comprado: " << dispositivo << endl;
 
                 saldor = 1000 - costo;
 
-                cout << "Saldo restante" << saldor << endl;
+                cout << "Saldo restante: $" << saldor << endl;
             }
 
             else
@@ -94,7 +101,7 @@ int main()
 
                 saldor = 1000 - costo;
 
-                cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
+                cout << "Le falta:" << saldor << " Para poder realizar la compra " << endl;
             }
 
             break;
@@ -114,19 +121,22 @@ int main()
 
             case 1:
 
-                costo = 1500 * 0.1;
+                descuento = 1500 * 0.1;
+                costo = 1500 - descuento;
 
                 break;
 
             case 2:
 
-                costo = 1200 * 0.1;
+                descuento = 1200 * 0.1;
+                costo = 1200 - descuento;
 
                 break;
 
             case 3:
 
-                costo = 2000 * 0.1;
+                descuento = 2000 * 0.1;
+                costo = 2000 - descuento;
 
                 break;
             default:
@@ -145,17 +155,18 @@ int main()
 
                 saldor = 1000 - costo;
 
-                cout << "Saldo restante" << saldor << endl;
+                cout << "Saldo restante: $" << saldor << endl;
             }
 
             else
             {
                 cout << " Saldo disponible: $1000" << endl;
+                cout << " Descuento: $" << descuento << endl;
                 cout << "No fue posible realizar la compra" << endl;
 
                 saldor = 1000 - costo;
 
-                cout << "Le falta:" << saldor << "Para poder realizar la compra" << endl;
+                cout << "Le falta:" << saldor << " Para poder realizar la compra" << endl;
             }
 
            break;

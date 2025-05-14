@@ -3,87 +3,117 @@
 
 using namespace std;
 
-int main (){
+int main()
+{
 
-int edad;
-char usuario;
+    int edad, usuario, dispositivo, laptopb, costo = 0;
+    laptopb = 900;
 
+    cout << "Bienvenido a nuestra tienda electronica" << endl;
+    cout << "Por favor ingrese su edad" << endl;
+    cin >> edad;
 
+    if (edad <= 16)
+    {
 
+        cout << "Lo sentimos no puede continuar la compra" << endl;
+    }
 
-cout << "Bienvenido a nuestra tienda electronica" << endl;
-cout << "Por favor ingrese su edad" << endl;
-cin >> edad;
+    else
+    {
+        // //Paso 2: Solicitar el tipo de usuario (1 punto)
+        // El programa debe pedir al usuario que seleccione una categoría:
+        // • Estudiante
+        // • Profesional
+        // • Ver todos
 
-if (edad <= 16){
+        cout << "Ingrese el tipo de usuario" << endl;
+        cout << "1. Estudiante" << endl;
+        cout << "2. Profesional" << endl;
+        cout << "3. Ver todos" << endl;
 
-    cout << "Lo sentimos no puede continuar la compra" << endl;
+        cin >> usuario;
 
-}
+        switch (usuario)
+        {
 
-else {
-// //Paso 2: Solicitar el tipo de usuario (1 punto) 
-// El programa debe pedir al usuario que seleccione una categoría: 
-// • Estudiante 
-// • Profesional 
-// • Ver todos
+        case '1':
 
- cout << "Ingrese el tipo de usuario" << endl;
- cout << "1. Estudiante" << endl;
- cout << "2. Profesional" << endl;
-cin >> usuario;
+            cout << "Dispositivos disponibles con el 20 por ciento de descuento" << endl;
+            cout << "1. Laptop Básica: $900  " << endl;
+            cout << "2. Tablet Estudiantil: $600  " << endl;
+            cout << "3. Chromebook: $700 " << endl;
 
-switch(usuario){
+            cin >> dispositivo;
 
-    case '1':
+            switch (dispositivo)
+            {
 
- cout << "Para estudiantes (descuento del 20%)" << endl;
-// //Para Estudiantes (descuento del 20%): 
-// • Laptop Básica: $900 
-// • Tablet Estudiantil: $600 
-// • Chromebook: $700
-    break;
+            case '1':
 
+                costo = laptopb * 0.2;
 
-    case '2':
+                break;
 
- cout << "NO" << endl;
+            case '2':
 
+                costo = 600 * 0.2;
 
-    break;
+                break;
 
-case '3':
+            case '3':
 
- cout << "NO" << endl;
+                costo = 700 * 0.2;
 
+                break;
+            }
 
-    break;
+            break;
 
+            if(costo < 1000){
 
-
-default:
-
-break;
-
-}
-
-
-
-}
-
-
-
-
-
+                cout << " Su compra ha sido exitosa"
 
 
-
+            }
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+        case '2':
+
+            cout << "NO" << endl;
+
+            break;
+
+        case '3':
+
+            cout << "Laptop Basica: $900  " << endl;
+            cout << "Tablet Estudiantil: $600  " << endl;
+            cout << "Chromebook: $700  " << endl;
+            cout << "Laptop Avanzada: $1500 " << endl;
+            cout << "Tablet Pro: $1200  " << endl;
+            cout << "Estacion de Trabajo: $2000 " << endl;
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
 
     return 0;
 }
